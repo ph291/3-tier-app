@@ -13,7 +13,7 @@ services:
       - key: DB_NAME
         value: testdb
 
-  - type: database
+  - type: web
     name: my-3tier-mysql
-    databaseName: testdb
-    user: root
+    runtime: docker
+    dockerfile_path: db/Dockerfile
