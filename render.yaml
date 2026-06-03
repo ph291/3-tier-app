@@ -2,7 +2,7 @@ services:
   - type: web
     name: my-3tier-backend
     runtime: docker
-    dockerfile_path: backend/Dockerfile
+    dockerfile_path: Docker-Compose-Projects/backend/Dockerfile
     envVars:
       - key: DB_HOST
         value: localhost
@@ -16,4 +16,4 @@ services:
   - type: web
     name: my-3tier-mysql
     runtime: docker
-    dockerfile_path: db/Dockerfile
+    dockerfile_path: Docker-Compose-Projects/db/Dockerfile
