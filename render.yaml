@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: my-3tier-backend
+    runtime: docker
+    dockerfile_path: backend/Dockerfile
+    envVars:
+      - key: DB_HOST
+        value: localhost
+      - key: DB_USER
+        value: root
+      - key: DB_PASSWORD
+        value: rootpassword
+      - key: DB_NAME
+        value: testdb
+
+  - type: database
+    name: my-3tier-mysql
+    databaseName: testdb
+    user: root
